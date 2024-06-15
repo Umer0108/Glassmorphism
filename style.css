@@ -1,0 +1,221 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    overflow:hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgb(241, 102, 236),rgb(230, 217, 152));
+    min-height:100vh;
+    min-width: 100vw;
+    overflow:hidden;
+}
+section>:nth-child(1){
+    height:300px;
+    width:600px;
+    top:0px;
+    right:0px;
+    filter:blur(150px);
+    position: absolute;
+    background:rgb(253, 132, 152);
+}
+section>:nth-child(2){
+    height:600px;
+    width:600px;
+    bottom: 0px;
+    right:0px;
+    filter:blur(150px);
+    position: absolute;
+    background:rgb(210, 222, 138);
+}
+section>:nth-child(3){
+
+    height:400px;
+    width:500px;
+    bottom: 0px;
+    right:0px;
+    filter:blur(150px);
+    position: absolute;
+    background:skyblue;
+}
+.square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgb(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.5);
+    border-right:1px solid rgb(255,255,255,0.2);
+    border-bottom:1px solid rgb(255,255,255,0.2);
+    background: rgba(255,255,255,0.21);
+    border-radius: 10px;
+}
+section>div>:nth-child(1){
+
+    top:-50px;
+    right:-50px;
+    height:100px;
+    width:100px;
+    z-index:2;
+}
+section>div>:nth-child(2){
+    top:100px;
+    right:270px;
+    height:80px;
+    width:80px;
+    z-index:4;
+}
+section>div>:nth-child(3){
+    top:200px;
+    right:-40px;
+    height:60px;
+    width:60px;
+}
+section>div>:nth-child(4){
+    top:350px;
+    right:100px;
+    height:50px;
+    width:50px;
+}
+section>div>:nth-child(5){
+    top:-80px;
+    right:160px;
+    height:60px;
+    width:60px;
+}
+section>div:nth-child(4){
+    position:relative;
+}
+section>div>:nth-child(6){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:300px;
+    min-width: 300px;
+    position:relative;
+    background: rgb(255,255,255,0.2);
+    border-radius: 5%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 40px rgb(0,0,0,0.1);
+    border:1px solid rgb(255,255,255,0.5);
+    border-right:1px solid rgb(255,255,255,0.1);
+    border-bottom:1px solid rgb(255,255,255,0.1);
+    touch-action: none;
+    z-index: 10;
+
+}
+section>div>form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding:40px
+}
+h2{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+.input{
+    border:none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding:10px 20px;
+    margin-top:20px;
+    width:100%;
+    border-radius: 35px;
+    border-right:1px solid rgb(255,255,255,0.2);
+    border-bottom:1px solid rgb(255,255,255,0.2);
+    letter-spacing: 1px;
+    color:#fff;
+}
+input::placeholder{
+    color:#fff;
+}
+
+.submit{
+    background: #fff;
+    color:#666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    
+}
+p{
+    margin-top: 5px;
+    color:#fff;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p a{
+    color:#fff;
+    font-weight: 600;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Bounce Animation*/
+@keyframes bounce {
+    0% , 100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-60px);
+    }
+  }
+  .bounce {
+    animation: bounce 5s linear infinite;
+  }
+
+  /*Slide-down+fade-in Animation*/
+@keyframes slide-down-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+.slide-down-fade-in {
+    animation: slide-down-fade-in 2.5s ;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%);/* right on X-exis*/
+    }
+    25% {
+      transform: translateX(0);/* center on X-exis*/
+    }
+    50% {
+      transform: translateX(-100%);/* left on X-exis*/
+    }
+    75% {
+      transform: translateX(0);/*center on X-exis*/
+    }
+    100% {
+      transform: translateX(100%);/* left on X-exis*/
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 5s linear infinite;
+  }
